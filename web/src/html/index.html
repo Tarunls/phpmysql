@@ -1,0 +1,34 @@
+<html>
+ <head>
+  <title>PHP & MySQL Connection Test</title>
+ </head>
+ <body>
+
+ <p>If you see Hello World below then PHP works fine!</p>
+<?php 
+
+echo '<h1>Hello World</h1>'; 
+?>
+<p>If you see Date & Time below then PHP is able to connect to MySQL!</p>
+
+<?php
+$host = "db";
+$user = "mysql";
+$pass = "mysql";
+$dbname = "mydb";
+
+
+$link = mysqli_connect($host, $user, $pass, $dbname);
+$sqlquery = "SELECT NOW() as `now`";
+if ($result = mysqli_query($link, $sqlquery)) 
+{
+    $row    = $result->fetch_array();
+    $now    = $row['now'];
+    echo "<h1> Date from MySQL -  $now </h1>";
+}
+mysqli_free_result($result);
+mysqli_close($link);
+
+?> 
+ </body>
+</html>
