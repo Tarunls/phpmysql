@@ -1,11 +1,10 @@
 # Apache, PHP & MySQL Docker Image
 
-****A repository to build a docker image with Apache, PHP and MySQL****
+****A repository to build docker image with Apache, PHP and MySQL****
 
 ## Prerequisites
 - Docker, Docker Compose
 - preferably  Git Bash or WSL
-</br>
 
 ## Installation
 
