@@ -1,6 +1,6 @@
-# Apache, PHP & MySQL Docker Image
+# Apache, PHP, MySQL  & PHP MyAdmin Docker Image
 
-****A repository to build docker image with Apache, PHP and MySQL****
+****A repository to build docker image with Apache, PHP, MySQL & PHP MyAdmin****
 
 ## Prerequisites
 - Docker, Docker Compose
@@ -34,12 +34,14 @@ Launch the browser and go to http://localhost. If all goes well it should look l
 
 ![alt text](php_mysql_connection_test.png "")
 
+Launch the broser and go to http://localhost:8080 to login to PHP MyAdmin.
+
 ## Default Values
 
 #### <u>Apache</u>
 - apache runs in port 80
 - apache /var/www/html is mapped to src/html
-  
+    
 #### <u>MySQL</u>
 - DB running on port 3306
 - DB data folder mapped to **/db/data/**
@@ -48,7 +50,9 @@ Launch the browser and go to http://localhost. If all goes well it should look l
 - default user name is **mysql**
 - default user password is **mysql**
   
-
+#### <u>PHP MyAdmin</u>
+- PHP MyAdmin runs in port 8080
+  
 ## Optional
 
 Change the following parameters to customize the Apache & MySQL 
