@@ -1,7 +1,6 @@
-FROM ubuntu:latest
+FROM php:7.4-apache
 
-RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    vim apache2 php7.2 libapache2-mod-php7.2 php7.2-mysql php7.2-mbstring php7.2-common php7.2-xml php7.2-json php7.2-curl php7.2-zip
+RUN docker-php-ext-install mysqli
 
 RUN rm -rf /var/www/*
 ADD src /var/www
